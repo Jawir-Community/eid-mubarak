@@ -32,7 +32,3 @@
 .bounce {
   animation: bounce 2s infinite;
 }
-
-body{
-  overflow: hidden;
-}

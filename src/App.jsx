@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>    
-      <div className="flex flex-col justify-center items-center min-h-screen gap-4 relative bg-[#91ac31]" onClick={handleParticleClick}>
+      <div className="flex flex-col justify-center items-center min-h-screen gap-4 relative bg-[#91ac31] overflow-hidden" onClick={handleParticleClick}>
         <Particles init={particleInit} options={{ preset: "confetti" }}/>
         <div className="absolute flex top-[-8rem] gap-8">
             <img src={ketupat} className="bounce" alt="" loading="lazy"/>
