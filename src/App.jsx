@@ -3,7 +3,7 @@ import {loadConfettiPreset} from 'tsparticles-preset-confetti'
 import { Typewriter } from "react-simple-typewriter"
 import { useState } from "react"
 import Countdown from "react-countdown"
-import music1 from './assets/music1.mp3'
+import music1 from './assets/audio/takbiran.mp3'
 
 function App() {
   const [message, setMessage] = useState(["🎉 Menuju 1 Syawal 1445 H ✨", "Selamat tinggal Ramadhan 1445 H 👋"])
@@ -35,18 +35,16 @@ function App() {
   return (
     <>    
       <Particles init={particleInit} options={{ preset: "confetti" }}/>
-      <div className="flex flex-col justify-center items-center min-h-screen gap-4">
+      <div className="flex flex-col justify-center items-center min-h-screen gap-4 bg-red-500">
         <span className="text-white lg:text-4xl text-xl font-bold z-50">
           <Typewriter words={message} loop={false} cursor/>
         </span>
         <div className="z-50 text-white">
           <Countdown date={Date.now() + timeLeft()} onComplete={() => {
             setMessage(["Selamat Hari Raya Idul Fitri 🙏🏻", "Mohon Maaf Lahir dan Batin 🙏🏻"])
-            const button = document.getElementById('button')
-            button.classList.remove("hidden")
           }}/>
         </div>
-        <button className="bg-white text-black z-50 p-4 rounded-lg animate-bounce mt-8 hidden" onClick={handleClick} id="button">Click Me</button>
+        <button className="bg-white text-black z-50 p-4 rounded-lg animate-bounce mt-8" onClick={handleClick}>Takbiran gas!!!</button>
       </div>
     </>    
   )
